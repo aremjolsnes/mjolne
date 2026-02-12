@@ -121,7 +121,10 @@ p {
     margin: 0 auto;
     font-size: 1.2rem;
     line-height: 1.8;
-    color: var(--text-color);
+    color: #555;
+    /* Softer than var(--text-color) */
+    font-weight: 400;
+    /* Ensure it's not too bold */
 }
 
 /* Projects Section */

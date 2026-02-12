@@ -20,8 +20,10 @@
             <p class="hero-subtitle">Hei, Are her 👋</p>
             <h1>Velkommen til min sandkasse</h1>
             <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
-                Nedenfor finner du et knippe av mine digitale eksperimenter – alt fra matoppskrifter til
-                avanserte pedagogiske verktøy bygget på data fra Grep (Udir).
+                Jeg jobber til daglig med Grep-databasen i Udir, og har i pauser og fritiden
+                lekt litt med å bruke AI til å lage ulike verktøy.
+                Nedenfor finner du et knippe av eksperimentene mine – alt fra matoppskrifter til
+                avanserte pedagogiske verktøy bygget på data fra Grep (Udir). Kanskje noe til og med er nyttig???
             </p>
         </div>
     </section>
@@ -30,11 +32,11 @@
     <section class="intro-text">
         <div class="container">
             <p>
-                Felles for prosjektene nedenfor er at de er bygget ved hjelp av AI-verktøyet til Google,
-                kalt <a href="https://antigravity.google/">Antigravity</a>. Det er et verktøy som hjelper deg
-                å skrive all mulig slags kode, og skal jeg være ærlig er det verktøyet som stort sett har
+                Felles for prosjektene er at de er bygget ved hjelp av AI-verktøyet til Google,
+                kalt <a href="https://antigravity.google/">Antigravity</a>. Det er et verktøy som hjelper med
+                å skrive all mulig slags kode, og skal jeg være dønn ærlig, er det AI-verktøyet som stort sett har
                 skrevet all kode i prosjektene. Alle filer "pushes" så til GitHub, slik at gratis-tjenesten
-                <a href="https://vercel.com/">Vercel</a> kan bygge og hoste dem og gjøre det tilgjengelig på
+                <a href="https://vercel.com/">Vercel</a> kan bygge ("deploye") og hoste dem og gjøre det tilgjengelig på
                 internett.
             </p>
         </div>
@@ -59,7 +61,8 @@
                             <span class="tag">Visualisering</span>
                         </div>
                         <h3>Grep Lærestier</h3>
-                        <p>Utforsk sammenhengen mellom kompetansemål i skolen. Visualisert som stier i et
+                        <p>Utforsk og lag "lærestier" som viser progresjonen mellom kompetansemål ved hjelp av
+                            `bygger-paa`-relasjonene i Grep. Dette er her visualisert som stier i et
                             læringslandskap.</p>
                         <a href="https://grep-laerestier.vercel.app" target="_blank" class="project-link">Åpne
                             prosjektet</a>
@@ -76,8 +79,10 @@
                             <span class="tag">Grep Sandkasse</span>
                             <span class="tag">Søk</span>
                         </div>
-                        <h3>Grep Utforsker</h3>
-                        <p>Et dybdesøk i Udirs læreplan-database. Finn nøyaktig det du leter etter med avanserte filtre.
+                        <h3>Grep utforsker</h3>
+                        <p>Et dybdesøk i Grep-databasen. Her kan du søke og finne nøyaktig det du leter etter med
+                            avanserte filtre.
+                            "Finds the needle before you can spell haystack"
                         </p>
                         <a href="https://grep-utforsker.vercel.app/" target="_blank" class="project-link">Åpne
                             prosjektet</a>
@@ -94,7 +99,7 @@
                             <span class="tag">Grep Sandkasse</span>
                             <span class="tag">Verktøy</span>
                         </div>
-                        <h3>LP Diff</h3>
+                        <h3>LP-Diff</h3>
                         <p>Sammenlign ulike versjoner av læreplaner. Se endringer side-om-side.</p>
                         <a href="https://lp-diff.vercel.app/" target="_blank" class="project-link">Åpne prosjektet</a>
                     </div>
@@ -111,8 +116,8 @@
                             <span class="tag">3D</span>
                         </div>
                         <h3>Grep Galaxy</h3>
-                        <p>En eksperimentell 3D-visning av kunnskapsuniverset. Se hvordan fag henger sammen i et
-                            galaktisk perspektiv.</p>
+                        <p>En eksperimentell 3D-visning av data fra . Se f.eks hvordan læreplaner henger sammen
+                            med utdanningsprogram og programområder i et galaktisk perspektiv.</p>
                         <a href="https://grep-galaxy.vercel.app/" target="_blank" class="project-link">Åpne
                             prosjektet</a>
                     </div>
@@ -129,8 +134,11 @@
                             <span class="tag">Kart</span>
                         </div>
                         <h3>Udir Kart</h3>
-                        <p>Kartløsning for Udir-ansatte ("Google Maps" look-and-feel) for å finne frem til møterom i
-                            Oslo-kontoret.</p>
+                        <p>Kartløsning for Udir-ansatte ("Google Maps"-aktig look-and-feel) for å finne frem til møterom
+                            i
+                            Oslo-kontoret. Jeg måtte bare lage det siden jeg til vanlig flyr rundt som en forvirret høne
+                            og
+                            leter etter møterom.</p>
                         <span class="project-link" style="color: #666; cursor: default;">Kun for ansatte i Udir</span>
                     </div>
                 </article>
@@ -162,7 +170,7 @@
             <h2>Hvordan dette er laget</h2>
             <p style="text-align: center; max-width: 700px; margin: 0 auto;">
                 Denne siden og prosjektene over er resultatet av et samarbeid mellom meg (menneske) og Antigravity
-                (kunstig intelligens).
+                (kunstig intelligens). Arkitekturen, eller rammeverket, er som følger:
             </p>
 
             <div class="workflow-steps">
@@ -178,9 +186,15 @@
                     <p>Versjonskontroll og lagring av kildekoden. Sikrer historikk og gjør samarbeidet sømløst.</p>
                 </div>
                 <div class="step">
+                    <span class="step-icon">🚀</span>
+                    <h3>Vercel</h3>
+                    <p>Brukes for å hoste selve prosjektene (Next.js/React-apps), som så "hentes inn" hit.</p>
+                </div>
+                <div class="step">
                     <span class="step-icon">🌐</span>
                     <h3>One.com</h3>
-                    <p>Tradisjonelt webhotell hvor filene lastes opp manuelt via SFTP. Enkelt og robust.</p>
+                    <p>Tradisjonelt webhotell hvor filene lastes opp manuelt via SFTP.
+                        Enkelt og robust for flate-filer-prosjekter.</p>
                 </div>
             </div>
         </div>
